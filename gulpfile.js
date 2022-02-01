@@ -96,7 +96,7 @@ const deploy = (config) => {
 
 const watchers = () => {
   watch("src/**/*.js", { ignoreInitial: false }, buildJS);
-  watch("src/scss/*.scss", { ignoreInitial: false }, buildCSS);
+  watch("src/scss/**/*.scss", { ignoreInitial: false }, buildCSS);
   watch("src/**/*.pug", { ignoreInitial: false }, buildHTML);
   watch("src/*.yaml", { ignoreInitial: false }, series(loadConfig, buildHTML));
   watch("assets/**/*", { ignoreInitial: false }, series(copyAssets, buildHTML));

@@ -125,3 +125,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.mobile {
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+}
