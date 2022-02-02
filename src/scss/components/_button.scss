@@ -25,15 +25,23 @@ button,
     -webkit-appearance: none;
 }
 
-button {
+button,
+[type="button"],
+[type="reset"],
+[type="submit"], .anchor-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 50px;
     padding: 10px 0;
     font-weight: 700;
     transition: .2s;
     width: 100%;
+    color: $white;
     
     @media only screen and (min-width: 992px) {
+        font-size: 15px;
         width: auto;
         min-width: 100px;
     }
@@ -44,7 +52,22 @@ button {
     }
 
     &.dark {
-        color: $white;
         background-color: $dark-green;
+    }
+
+    &.line {
+        color: $dark-green;
+        background-color: $white;
+        border: .5px solid $dark-green;
+    }
+}
+
+
+main {
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"], .anchor-btn {
+        font-size: 25px;
     }
 }

@@ -135,3 +135,15 @@ table {
     display: none;
   }
 }
+
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+$padding-top: $header-height + 65;
+main {
+  & > :nth-child(1) {
+    padding-top: $padding-top;
+  }
+}
