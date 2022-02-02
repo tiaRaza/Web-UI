@@ -1,0 +1,42 @@
+.hero-content {
+    h1,p {
+        text-align: center;
+
+        br {
+            @media only screen and (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 52px;
+        font-weight: 700;
+        @media only screen and (min-width: 992px) {
+            font-size: 60px;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    picture, p {
+        margin-top: 50px;
+    }
+
+    picture {
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    button, .anchor-btn {
+        margin-top: 25px;
+    }
+}
