@@ -125,3 +125,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.mobile {
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+$padding-top: $header-height + 65;
+main {
+  & > :nth-child(1) {
+    padding-top: $padding-top;
+  }
+}
