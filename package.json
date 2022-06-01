@@ -4,7 +4,8 @@
   "description": "Boilerplate for starting a fresh new project with Gulp + SASS + PUG",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",

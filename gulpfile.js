@@ -42,14 +42,14 @@ const buildJS = (cb) => {
     .bundle()
     .pipe(source("main.js"))
     .pipe(buffer())
-    .pipe(dest("dist/"))
+    .pipe(dest("public/"))
     .pipe(connect.reload());
 };
 
 const buildCSS = (cb) => {
   return src("src/scss/*.scss")
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-    .pipe(dest("dist/css/"))
+    .pipe(dest("public/css/"))
     .pipe(connect.reload());
 };
 
@@ -61,12 +61,12 @@ const buildHTML = (cb) => {
         data: config,
       })
     )
-    .pipe(dest("dist/"))
+    .pipe(dest("public/"))
     .pipe(connect.reload());
 };
 
 const cleanAll = () => {
-  return del("dist");
+  return del("public");
 };
 
 const remoteDeployTest = () => {
