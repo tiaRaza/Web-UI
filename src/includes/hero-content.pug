@@ -1,12 +1,15 @@
 .wrapper.bg-green.hero-content 
-    h1 Furniture that everyone
-        br 
-        |Loves 
-    p We have 5000+ Review and our customers trust on our Furniture and Quality products.
+    div.hero-content__text
+        h1 Furniture that everyone
+            br 
+            |  Loves 
+        p We have 5000+ Review and our customers trust on our Furniture and Quality products.
 
     picture
-        //- source(media="(min-width:480)" srcset="https://via.placeholder.com/400x300")
-        img(src="https://via.placeholder.com/400x300" alt="hero-img")
+        source(media="(min-width:760px)" srcset="/img/sofa-desk.jpg")
+        source(media="(min-width:480px)" srcset="/img/sofa-mob.jpg")
+        img(src="/img/sofa-mob.jpg" alt="hero-img")
 
-    button.dark(type="button") Buy Now
-    a.anchor-btn.line(href="#" title="Explore") Explore
+    div.hero-content__cta
+        button.dark(type="button") Buy Now
+        a.anchor-btn.line(href="#" title="Explore") Explore

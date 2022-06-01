@@ -34,7 +34,7 @@ button,
     text-decoration: none;
     cursor: pointer;
     border-radius: 50px;
-    padding: 10px 0;
+    padding: 15px 0;
     font-weight: 700;
     transition: .2s;
     width: 100%;
@@ -48,7 +48,6 @@ button,
 
     &:hover {
         opacity: 0.8;
-        box-shadow: 2px 2px #ffffff50;
     }
 
     &.dark {
@@ -57,8 +56,8 @@ button,
 
     &.line {
         color: $dark-green;
-        background-color: $white;
-        border: .5px solid $dark-green;
+        background-color: none;
+        border: 2px solid $dark-green;
     }
 }
 
@@ -69,5 +68,9 @@ main {
     [type="reset"],
     [type="submit"], .anchor-btn {
         font-size: 25px;
+        padding: 18px 0;
+        @media only screen and (min-width: 992px) {
+            font-size: 20px;
+        }
     }
 }

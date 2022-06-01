@@ -1,4 +1,21 @@
+
+$text-width: 42%;
+$img-width: (100 - ($text-width - 5));
+$item-marg-top: 100px;
 .hero-content {
+    position: relative;
+    overflow-y: visible;
+    max-height: 700px;
+    margin-bottom: 400px;
+
+    @media only screen and (min-width: 600px) {
+        min-height: 600px;
+        margin-bottom: 500px;
+    }
+    @media only screen and (min-width: 992px) {
+        min-height: 800px;
+        margin-bottom: 200px;
+    }
     h1,p {
         text-align: center;
 
@@ -7,6 +24,10 @@
                 display: none;
             }
         }
+
+        @media only screen and (min-width: 992px) {
+            text-align: left;
+        }
     }
 
     h1 {
@@ -14,29 +35,97 @@
         line-height: 52px;
         font-weight: 700;
         @media only screen and (min-width: 992px) {
-            font-size: 60px;
+            font-size: 70px;
+            line-height: 72px;
         }
     }
-
+    
     p {
         font-size: 20px;
         line-height: 22px;
-    }
-
-    picture, p {
         margin-top: 50px;
+
+        @media only screen and (min-width: 992px) {
+            margin-top: 25px;
+            line-height: 35px;
+        }
     }
 
     picture {
         display: block;
+        position: relative;
+        margin-top: 50px;
+        @media only screen and (min-width: 992px) {
+            margin-top: $item-marg-top;
+        }
 
         img {
             width: 100%;
             height: auto;
+            @media only screen and (min-width: 992px) {
+                width: $img-width;
+                position: absolute;
+                right: 0;
+            }
         }
     }
 
     button, .anchor-btn {
         margin-top: 25px;
+    }
+
+    &__text, &__cta  {
+        position: relative;
+        @media only screen and (min-width: 992px) {
+            z-index: 1;
+        }
+    }
+    &__text {
+        @media only screen and (min-width: 992px) {
+            width: $text-width;
+            float: left;
+            margin-top: $item-marg-top + 10;
+        }
+    }
+
+    &__cta {
+        @media only screen and (min-width: 992px) {
+            margin-top: 30px;
+            width: $text-width;
+            clear: both;
+            float: left;
+        }
+
+        * {
+            @media only screen and (min-width: 992px) {
+                display: inline-block;
+                margin-top: 0;
+            }
+        }
+
+        & > :nth-child(1) {
+            @media only screen and (min-width: 992px) {
+                width: 35%;
+                margin-right: 14px;
+            }
+        }
+
+        & > :nth-child(2) {
+            @media only screen and (min-width: 992px) {
+                width: 25%;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.bg-green {
+    .hero-content__cta {
+        .anchor-btn.line {
+            @media only screen and (min-width: 992px) {
+                color: $white;
+                border-color: $white;
+            }
+        }
     }
 }
